@@ -19,7 +19,6 @@ export default function TransactionList({ transactions: initialTransactions }) {
   const [transactions, setTransactions] = useState(initialTransactions);
   const [previewUrl, setPreviewUrl] = useState(null);
   const [editTx, setEditTx] = useState(null);
-  const [editForm, setEditForm] = useState({});
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState('');
   const [filterType, setFilterType] = useState('All');
@@ -38,10 +37,6 @@ export default function TransactionList({ transactions: initialTransactions }) {
 
   const [filterCategory, setFilterCategory] = useState('All');
   const [sortBy, setSortBy] = useState('date-desc');
-  const [filterMinAmount, setFilterMinAmount] = useState('');
-  const [filterMaxAmount, setFilterMaxAmount] = useState('');
-  const [filterStartDate, setFilterStartDate] = useState('');
-  const [filterEndDate, setFilterEndDate] = useState('');
 
   // Unique categories for filter dropdown
   const uniqueCategories = useMemo(() => {

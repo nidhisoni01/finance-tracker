@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import ImageUploader from '../components/ImageUploader';
-import TransactionList from '../components/TransactionList';
 import { useAuth } from '../context/AuthContext';
 
 function AddTransaction({ onTransactionAdded }) {
@@ -12,11 +11,11 @@ function AddTransaction({ onTransactionAdded }) {
   const [type, setType] = useState('Expense');
   const [category, setCategory] = useState('Other');
   const [date, setDate] = useState(() => new Date().toISOString().slice(0, 10));
-  const [transactions, setTransactions] = useState([]);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     fetchTransactions();
   }, []);
@@ -26,7 +25,7 @@ function AddTransaction({ onTransactionAdded }) {
       headers: { Authorization: `Bearer ${token}` }
     });
     const data = await res.json();
-    setTransactions(data);
+    // setTransactions(data); // This line was removed as per the edit hint
   };
 
   const handleReceiptCropped = file => {

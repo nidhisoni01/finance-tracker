@@ -23,7 +23,6 @@ export default function Dashboard({ onNavigate }) {
   });
   const [transactions, setTransactions] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
   const [showAddTransaction, setShowAddTransaction] = useState(false);
   const [budget, setBudget] = useState("");
   const [totalBalance, setTotalBalance] = useState("");
@@ -72,7 +71,6 @@ export default function Dashboard({ onNavigate }) {
     async function fetchDashboardData() {
       if (!token) return;
       setLoading(true);
-      setError(null);
       try {
         // Fetch dashboard stats
         const statsRes = await fetch(`${API_BASE_URL}/api/transactions/dashboard/stats`, {
@@ -91,7 +89,6 @@ export default function Dashboard({ onNavigate }) {
           setTransactions(transactionsData.slice(0, 10)); // Show only recent 10
         }
       } catch (err) {
-        setError(err.message);
         showToast('Failed to load dashboard data', 'error');
       } finally {
         setLoading(false);

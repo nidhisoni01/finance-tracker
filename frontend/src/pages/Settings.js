@@ -47,7 +47,6 @@ export default function Settings() {
   const [pwFields, setPwFields] = useState({ current: '', new: '', confirm: '' });
   const [pwLoading, setPwLoading] = useState(false);
   const [pwMsg, setPwMsg] = useState(null);
-  const [profileEdit, setProfileEdit] = useState(false);
   const [profileFields, setProfileFields] = useState({ name: user?.name || '', email: user?.email || '' });
   const [profilePhoto, setProfilePhoto] = useState(null);
   const [profileLoading, setProfileLoading] = useState(false);

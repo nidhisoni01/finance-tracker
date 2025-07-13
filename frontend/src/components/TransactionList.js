@@ -37,10 +37,6 @@ export default function TransactionList({ transactions: initialTransactions }) {
   const [editLoading, setEditLoading] = useState(false);
 
   const [filterCategory, setFilterCategory] = useState('All');
-  const [filterMinAmount, setFilterMinAmount] = useState('');
-  const [filterMaxAmount, setFilterMaxAmount] = useState('');
-  const [filterStartDate, setFilterStartDate] = useState('');
-  const [filterEndDate, setFilterEndDate] = useState('');
   const [sortBy, setSortBy] = useState('date-desc');
 
   // Unique categories for filter dropdown
@@ -107,9 +103,6 @@ export default function TransactionList({ transactions: initialTransactions }) {
   const closeEdit = () => {
     setEditTx(null);
     setEditForm({});
-  };
-  const handleEditChange = e => {
-    setEditForm({ ...editForm, [e.target.name]: e.target.value });
   };
   const handleEditSubmit = async e => {
     e.preventDefault();

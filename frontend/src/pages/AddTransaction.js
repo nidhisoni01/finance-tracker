@@ -24,7 +24,6 @@ function AddTransaction({ onTransactionAdded }) {
     const res = await fetch('http://localhost:5000/api/transactions', {
       headers: { Authorization: `Bearer ${token}` }
     });
-    const data = await res.json();
     // setTransactions(data); // This line was removed as per the edit hint
   };
 

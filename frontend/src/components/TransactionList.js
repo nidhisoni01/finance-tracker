@@ -38,6 +38,10 @@ export default function TransactionList({ transactions: initialTransactions }) {
 
   const [filterCategory, setFilterCategory] = useState('All');
   const [sortBy, setSortBy] = useState('date-desc');
+  const [filterMinAmount, setFilterMinAmount] = useState('');
+  const [filterMaxAmount, setFilterMaxAmount] = useState('');
+  const [filterStartDate, setFilterStartDate] = useState('');
+  const [filterEndDate, setFilterEndDate] = useState('');
 
   // Unique categories for filter dropdown
   const uniqueCategories = useMemo(() => {

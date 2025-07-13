@@ -8,7 +8,7 @@ import getCroppedImg from '../utils/cropImage';
 const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000';
 
 function Profile() {
-  const { token, user, setUser } = useAuth();
+  const { token, setUser } = useAuth();
   const { showToast } = useToast();
   const [profile, setProfile] = useState(null);
   const [loading, setLoading] = useState(true);

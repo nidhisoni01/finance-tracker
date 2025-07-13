@@ -1,5 +1,4 @@
 import { PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import { useTheme } from '../context/ThemeContext';
 
 const COLORS = [
   '#6366f1', // muted indigo

@@ -51,6 +51,7 @@ export default function Settings() {
   const [profilePhoto, setProfilePhoto] = useState(null);
   const [profileLoading, setProfileLoading] = useState(false);
   const [profileMsg, setProfileMsg] = useState(null);
+  const [profileEdit, setProfileEdit] = useState(false);
   
   // Delete account state
   const [showDeleteModal, setShowDeleteModal] = useState(false);

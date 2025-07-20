@@ -71,7 +71,7 @@ npm start
 
 **.env example:**
 ```
-MONGODB_URI=mongodb://localhost:27017/finance_app
+MONGODB_URI=MongoDB connection string
 JWT_SECRET=your_jwt_secret
 SESSION_SECRET=your_session_secret
 GOOGLE_CLIENT_ID=your_google_client_id

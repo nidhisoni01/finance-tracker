@@ -1,0 +1,19 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+*.log
+
+# Uploads and user files
+uploads/
+backend/uploads/
+backend/backend/uploads/
+
+# System/IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/ 
